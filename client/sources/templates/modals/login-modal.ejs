@@ -1,0 +1,78 @@
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="loginModalForm" tabindex="-1" role="dialog" aria-labelledby="loginDialog" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <div class="limiter">
+                <div class="container-login100">
+                    <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                        <form class="login100-form validate-form">
+                            <span class="login100-form-title p-b-49">
+                                <%= translations['login'] %>
+                            </span>
+
+                            <div class="wrap-input100 validate-input m-b-23" data-validate = "<%= translations['username_is_required'] %>">
+                                <span class="label-input100"><%= translations['username'] %></span>
+                                <input class="input100" type="text" name="username" placeholder="<%= translations['type_username'] %>">
+                                <span class="focus-input100" data-symbol="&#xf206;"></span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate="<%= translations['password_is_required'] %>">
+                                <span class="label-input100"><%= translations['password'] %></span>
+                                <input class="input100" type="password" name="pass" placeholder="<%= translations['type_password'] %>">
+                                <span class="focus-input100" data-symbol="&#xf190;"></span>
+                            </div>
+                            
+                            <div class="text-right p-t-8 p-b-31">
+                                <a data-action="forgot-password">
+                                    <%= translations['forgot_password'] %>
+                                </a>
+                            </div>
+                            
+                            <div class="container-login100-form-btn">
+                                <div class="wrap-login100-form-btn">
+                                    <div class="login100-form-bgbtn"></div>
+                                    <button class="login100-form-btn">
+                                        <%= translations['login'] %>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="txt1 text-center p-t-54 p-b-20">
+                                <span>
+                                    <%= translations['sign_up_using'] %>
+                                </span>
+                            </div>
+
+                            <div class="flex-c-m">
+                                <a class="login100-social-item bg1" data-action="login-with-facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+
+                                <a class="login100-social-item bg2" data-action="login-with-twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+
+                                <a class="login100-social-item bg3" data-action="login-with-google-plus">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                            </div>
+
+                            <div class="flex-col-c p-t-155">
+                                <span class="txt1 p-b-17">
+                                    <%= translations['sign_up_using'] %>
+                                </span>
+
+                                <a class="txt2" data-action="sign-up">
+                                    <%= translations['sign_up'] %>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login / Register Form-->

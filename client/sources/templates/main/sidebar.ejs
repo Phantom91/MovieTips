@@ -1,0 +1,48 @@
+<%  
+    const menu_items = [
+        {id : '/home', label : translations['home']}, 
+        {id : 'movies', label : translations['movies'], disabled : !user.loggedIn},
+        {id : 'news', label : translations['news'], disabled : !user.loggedIn},
+        {id : 'profile', label : translations['profile'], disabled : !user.loggedIn},
+        {id : 'friends', label : translations['friends'], disabled : !user.loggedIn}
+    ]
+%>
+
+<div class="container-with-sidebar">
+    <div id="sidebar">
+        <div class="sidebar-content">
+            <ul>
+                <% _.each(menu_items, (menu_item) => { %>
+                    <li class="<%= menu_item.disabled ? 'disabled' : ''%>">
+                        <a href="#<%=menu_item.id%>"><%= menu_item.label %></a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="swipe-area"></div>
+        <a data-toggle=".container-with-sidebar" id="sidebar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="content">
+            <div class="view-content" id="subview">
+                <%- include('navbar', { translations : translations }) %>
+                <!-- here the subview will be included -->
+                    <% if(typeof inject === "undefined") { %>
+                        <div id="landing-page">
+                            <%- include('landing-page', { translations : translations }) %>
+                        </div>
+                    <% } else { %>
+                        <div id="<%=inject.id%>">
+                            <%- include(inject.page, {translations : translations}) %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <%- include('footer', {translations : translations}) %>
+        </div>
+    </div>
+</div>    

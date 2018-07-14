@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <%- include('main/header') -%>
+    <!-- Body -->
+    <body>
+        <div class="loading" style="display : none">
+            <div class="loader"></div>
+            <h5><%= translations['loading'] %></h5>
+        </div>
+        <div id="main-app">
+            <!--here the main content will be included -->
+            <%- include('main/sidebar', {translations : translations}) %>
+        </div>
+        
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
+        <!-- All vendors js concat and minified into a single file -->
+        <script type="text/javascript" src="./static/vendor/vendor-min.js"></script>
+        <!-- All js scripts concat and minified into a single file -->
+        <script type="text/javascript" src="./static/js/app.min.js"></script>
+    </body>
+</html>

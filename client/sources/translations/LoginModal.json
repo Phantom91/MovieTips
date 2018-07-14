@@ -1,0 +1,17 @@
+{
+    "en" : {
+        "login" : "Login",
+        "username" : "Username",
+        "type_username" : "Type your username",
+        "username_is_required" : "Username is required",
+        "password" : "Password",
+        "type_password" : "Type your password",
+        "repeat_password" : "Repeat your password",
+        "type_repeat_password" : "Type your password again",
+        "password_is_required" : "Password is required",
+        "type_your_password_again" : "You need to type your password again to verify it",
+        "forgot_password" : "Forgot password?",
+        "sign_up_using" : "Or Sign Up Using",
+        "sign_up" : "Sign up"
+    }
+}

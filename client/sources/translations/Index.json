@@ -1,0 +1,11 @@
+{
+    "en" : {
+        "home" : "Home",
+        "movies" : "Movies",
+        "news" : "News",
+        "profile" : "Profile",
+        "friends" : "Friends",
+        "loading" : "Loading...",
+        "app_title" : "MovieTips"
+    }
+}

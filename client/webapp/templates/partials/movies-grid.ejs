@@ -1,0 +1,20 @@
+<%
+    function lcfirst (str) {
+        //  discuss at: http://locutus.io/php/lcfirst/
+        // original by: Brett Zamir (http://brett-zamir.me)
+        //   example 1: lcfirst('Kevin Van Zonneveld')
+        //   returns 1: 'kevin Van Zonneveld'
+
+        str += ''
+        var f = str.charAt(0)
+        .toLowerCase()
+        return f + str.substr(1)
+    }
+
+    function rand(n){
+        return Math.floor(Math.random() * n);
+    }
+%> <!-- Portfolio Gallery --><div id="js__grid-portfolio-gallery" class="cbp col-centered"> <% _.each(movies, function(movie) { 
+        let genresCounter = movie.genres.length; 
+    %> <!-- Item --><div class="s-portfolio__item cbp-item motion <% if(genresCounter > 0) %> <%= lcfirst(movie.genres[rand(genresCounter)].name) %>"><div class="s-portfolio__img-effect"><img src="http://image.tmdb.org/t/p/original/<%=movie.poster_path%>" alt="<%=movie.title%>"></div><div class="s-portfolio__caption-hover--cc"><div class="g-margin-b-25--xs"><h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs"><%=movie.title%></h4><p class="g-color--white-opacity text-uppercase">Release date : <%= moment(movie.release_date).format("D-M-Y") %> <% if(genresCounter > 0) { %> <br><%= 'Genres : ' %> <% index = 0;
+                                _.each(movie.genres, function(genre) { %> <span class="genre"><%= genre.name %></span> <%});%> <% } %> <br>Rating : <span><%= movie.vote_average %></span><span>/10</span></p></div><ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs"><li><a href="https://www.youtube.com/watch?v=<%= movie.trailers.youtube[0] && movie.trailers.youtube[0].source %>" data-type="youtube" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="<%= movie.title %>"><i class="ti-fullscreen"></i></a></li><li><a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="s-icon s-icon--sm s-icon s-icon--white-bg g-radius--circle"><i class="ti-info"></i></a></li></ul></div></div> <% }); %> <!-- End Item --></div><!-- End Portfolio Gallery -->
