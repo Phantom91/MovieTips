@@ -27,7 +27,7 @@ class MovieTips {
                 // Start Backbone history a necessary step for bookmarkable URL's
                 Backbone.history.start({
                     pushState: true,
-                    root: "/moviefind"
+                    root: "/movietips"
                 });
                 this.listenTo(this.model, 'change', this.render);
             },

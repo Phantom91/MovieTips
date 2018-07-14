@@ -66,7 +66,7 @@ createServer(app).listen(app.get('port'), () => {
     console.log("Express server listening on port " + app.get('port'));
 });
 
-app.get('/moviefind', (req, res) => {
+app.get('/movietips', (req, res) => {
     console.log('Render index');
     res.render(__dirname + '/webapp/templates/index.ejs', {translations : translations});
 });

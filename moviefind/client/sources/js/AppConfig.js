@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'http://localhost:9080/moviefind/api',
+const API_ENDPOINT = 'http://localhost:9080/movietips/api',
     _DefaultLanguage = 'en',
     _RenderService = `${API_ENDPOINT}/render`,
     _TemplatesPath = 'client/webapp/templates';
