@@ -147,12 +147,12 @@
 			return $this->FindMoviesInfo($this->PostProcessRecomandations($recommendations));
 		}
 
-		private function Setredis($key, $value){
-            return $this->redis->set($key, $value);
+		private function SetKey($key, $value){
+            return $this->redis->set($key, json_encode($value->getJSON()));
         }
 
-        private function Getredis($key){
-            return $this->redis->get($key);
+        private function GetKey($key){
+            return json_decode($this->redis->get($key), true);
         }
 
 		private function FindMoviesInfo($movies){
@@ -160,8 +160,8 @@
 			$_temp = array();
 			$moviesIds = array();
 			foreach($movies as $movie){
-				if(($_movie = $this->Getredis('movie_' . $movie->GetID())) !== FALSE){
-					array_push($moviesInfo, $_movie);
+				if(($_movie = $this->GetKey('movie_' . $movie->GetID())) !== null){
+					array_push($moviesInfo, json_decode($_movie));
 				}else{
 					array_push($moviesIds, $movie->GetID());
 				}
@@ -172,7 +172,7 @@
 			}
 			$_temp = $this->tmdbApi->getMovies($moviesIds);
 			foreach($_temp as $_movie){
-				$this->Setredis('movie_' . $_movie->GetID(), $_movie);
+				$this->SetKey('movie_' . $_movie->GetID(), $_movie);
 				array_push($moviesInfo, $_movie);
 			}
 			if(count($moviesInfo) == 0 && $this->tmdbApi->maximumLimitReached()){

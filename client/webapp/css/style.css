@@ -14146,14 +14146,15 @@ iframe {
 
 .view-content .navbar {
   background-color: #31A1DF !important;
-  height: 70px;
+  height: 62px;
   margin-bottom: 1px !important;
   border-radius: 2px !important;
 }
 
 .view-content .navbar .nav-pills {
-  top: -14px;
+  top: -20px;
   position: relative;
+  right: 15px;
 }
 
 .view-content .navbar a.navbar-brand {
@@ -14162,6 +14163,7 @@ iframe {
 
 .view-content .navbar a.nav-link {
   color: #fff !important;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -15802,6 +15804,15 @@ li.disabled a {
 .grid {
   height: 100% !important;
   min-height: 500px !important;
+}
+
+.page-content {
+  position: relative;
+  top: -11px;
+}
+
+#landing-page .swiper-container-horizontal {
+  max-height: 95vh;
 }
 
 /*----------------------------------

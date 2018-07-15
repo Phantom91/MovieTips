@@ -1,3 +1,5 @@
+ <% const copyrightText = helpers.compilePartial(translations['copyright_text'], {translations : translations}) %>
+
  <!--========== FOOTER ==========-->
  <footer class="g-bg-color--dark">
     <div class="footer-content">
@@ -45,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col-xs-6 g-text-right--xs">
-                    <%- translations['copyright_text'] %>
+                    <%- copyrightText %>
                 </div>
             </div>
         </div>

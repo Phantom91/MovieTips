@@ -246,3 +246,12 @@ li.disabled {
 	height: 100% !important;
 	min-height: 500px !important;
 }
+
+.page-content {
+	position: relative;
+    top: -11px;
+}
+
+#landing-page .swiper-container-horizontal {
+	max-height: 95vh;
+}

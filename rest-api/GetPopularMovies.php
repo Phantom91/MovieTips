@@ -5,7 +5,7 @@
 	$exportObject = array();
 	$index = 0;
 	foreach($popularMovies as $movie){
-		$exportObject[$index++] = json_decode($movie->getJSON());
+		$exportObject[$index++] = $movie;
 	}
 	echo json_encode($exportObject);
 ?>

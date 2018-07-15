@@ -32,11 +32,11 @@
                 <%- include('navbar', { translations : translations }) %>
                 <!-- here the subview will be included -->
                     <% if(typeof inject === "undefined") { %>
-                        <div id="landing-page">
+                        <div id="landing-page" class="page-content">
                             <%- include('landing-page', { translations : translations }) %>
                         </div>
                     <% } else { %>
-                        <div id="<%=inject.id%>">
+                        <div id="<%=inject.id%>" class="page-content">
                             <%- include(inject.page, {translations : translations}) %>
                         </div>
                     <% } %>

@@ -1,17 +1,19 @@
 .view-content .navbar{
     background-color: $navbar-color !important;
-    height: 70px;
+    height: 62px;
     margin-bottom: 1px !important;
     border-radius : 2px !important;
     & .nav-pills {
-        top: -14px;
+        top: -20px;
         position: relative;
+        right: 15px;
     }
     a.navbar-brand {
         color : #fff !important;
     }
     a.nav-link {
         color : #fff !important;
+        font-size: 16px;
         &:hover, &:focus{
             background-color: #146c8c !important;
         }
